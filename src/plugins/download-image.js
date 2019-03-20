@@ -1,7 +1,7 @@
 /**
-* This plugin adds a button to the window top bar. On Click it tries to
-* extract the image url of the currently selected canvas and opens the
-* image in a new tap.
+* This plugin adds a button to the window top bar. On click it tries to
+* extract the image url of the current selected canvas and opens the
+* image in a new browser tab.
 */
 
 import React from 'react';
@@ -13,6 +13,7 @@ import mirador from 'mirador';
 
 /**
 * Extract image url of the selected canvas from manifest.
+*
 * For the sake of simplicity it only recognizes the url if it's
 * a fully qualified jpeg url. That is, it doesn't transform
 * a info.json to a image url.
@@ -74,12 +75,12 @@ function mapStateToProps(state, { windowId }) {
 * This is the actual plugin object.
 */
 export default {
-  /* Component the plugin addresses */
+  // Component the plugin addresses
   target: 'WindowTopBarButtons',
-  /* Plugin mode replace */
+  // Plugin mode replace
   mode: 'replace',
-  /* Component that will be renderd in place of the target */
+  // Component that will be renderd in place of the target
   component: DownloadButton,
-  /* This function will be used to connect the plugin component to the mirador store */
+  // This function will be used to connect the plugin component to the mirador store
   mapStateToProps: mapStateToProps,
 };
