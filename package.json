@@ -30,6 +30,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
+    "lodash": "^4.17.11",
     "mirador": "^3.0.0-alpha.2"
   }
 }
