@@ -9,7 +9,8 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import IconButton from '@material-ui/core/IconButton';
 import ImageIcon from '@material-ui/icons/ImageOutlined';
-import mirador from 'mirador';
+// the mirador version that is used here is not on npm yet
+import mirador from '/home/mathias/github/mirador';
 
 /**
 * Extract image url of the selected canvas from manifest.
@@ -28,7 +29,7 @@ function getImageUrlFromCanvas(canvas) {
 }
 
 /**
-* This component will be places in the window top bar.
+* This component will be placed to the window menu.
 * It gets the current canvas injected (as manifesto object).
 */
 class DownloadButton extends React.Component {
@@ -67,7 +68,7 @@ class DownloadButton extends React.Component {
 */
 function mapStateToProps(state, { windowId }) {
   return {
-    canvas: mirador.selectors.getSelectedCanvas(state, windowId)
+    canvas: mirador.selectors.getSelectedCanvas(state, { windowId })
   };
 };
 
@@ -76,10 +77,10 @@ function mapStateToProps(state, { windowId }) {
 */
 export default {
   // Component the plugin addresses
-  target: 'WindowTopBarButtons',
-  // Plugin mode replace
-  mode: 'replace',
-  // Component that will be renderd in place of the target
+  target: 'WindowTopMenu',
+  // Plugin mode add
+  mode: 'add',
+  // Component that will be added to the window menu
   component: DownloadButton,
   // This function will be used to connect the plugin component to the mirador store
   mapStateToProps: mapStateToProps,
