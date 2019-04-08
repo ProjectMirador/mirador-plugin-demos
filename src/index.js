@@ -5,8 +5,10 @@ import downloadImagePlugin from './plugins/download-image';
 import slideshowPlugin from './plugins/slideshow';
 import copyWindowPlugin from './plugins/copy-window';
 
-mirador.viewer(config, [
+const miradorInstance = mirador.viewer(config, [
   downloadImagePlugin,
   slideshowPlugin,
   copyWindowPlugin,
 ]);
+
+export default miradorInstance;

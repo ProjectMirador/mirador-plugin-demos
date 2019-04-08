@@ -6,6 +6,9 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    library: 'mirador',
+    libraryExport: 'default',
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
