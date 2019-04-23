@@ -15,8 +15,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
-// the mirador version that is used here is not on npm yet
-import mirador from '/home/mathias/github/mirador';
+import mirador from 'mirador';
 import { OSDReferences } from './osd-reference';
 
 const ERR_NO_IMAGE_SERVICE = "Can not find an image service in the manifest file.";

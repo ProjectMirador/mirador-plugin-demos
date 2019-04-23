@@ -1,5 +1,4 @@
-// the mirador version that is used here is not on npm yet
-import mirador from '/home/mathias/github/mirador';
+import mirador from 'mirador';
 import config from './mirador-config';
 
 import slideshowPlugin from './plugins/slideshow';
