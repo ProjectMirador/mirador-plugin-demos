@@ -31,6 +31,7 @@ const mapDispatchToProps = (dispatch, { windowId }) => ({
 });
 
 export default {
+  name: "Open in new window",
   target: 'WindowTopMenu',
   mode: 'add',
   component: CopyWindowComponent,

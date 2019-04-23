@@ -110,6 +110,7 @@ const mapDispatchToProps = (dispatch, { windowId }) => ({
 });
 
 export default {
+  name: 'Slideshow'
   // The plugins target
   target: 'WindowTopMenu',
   // The mode of the plugin
