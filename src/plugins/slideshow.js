@@ -2,8 +2,8 @@ import React from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import StartIcon from '@material-ui/icons/PlayCircleOutline';
 import StopIcon from '@material-ui/icons/PauseCircleOutline';
-// the mirador version that is used here is not on npm yet
-import mirador from '/home/mathias/github/mirador';
+import mirador from 'mirador';
+
 
 /**
 * This component will be placed to the window menu.

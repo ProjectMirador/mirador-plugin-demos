@@ -1,8 +1,7 @@
 import React from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import OpenInNewIcon from '@material-ui/icons/OpenInNewOutlined';
-// the mirador version that is used here is not on npm yet
-import mirador from '/home/mathias/github/mirador';
+import mirador from 'mirador';
 import omit from 'lodash/omit';
 
 const CopyWindowComponent = (props) => (
