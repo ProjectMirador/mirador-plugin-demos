@@ -119,10 +119,22 @@ class DownloadDialog extends React.Component {
     const { formats, qualities } = this.props;
     return(
       <>
-        { this.renderRegionRadioButtons() }
-        { qualities && this.renderQualitySelections() }
-        { formats && this.renderFormatSelections() }
+        <Grid item>
+          { this.renderRegionRadioButtons() }
+        </Grid>
+        <Grid container item spacing={32}>
+          <Grid item>
+            { qualities && this.renderQualitySelections() }
+          </Grid>
+          <Grid item>
+            { formats && this.renderFormatSelections() }
+          </Grid>
+        </Grid>
+        <Grid item>
+        </Grid>
+        <Grid item>
         { this.renderDownloadButton() }
+        </Grid>
       </>
     )
   }
@@ -136,7 +148,7 @@ class DownloadDialog extends React.Component {
     return (
       <Dialog open={open} onClose={onClose} disableEnforceFocus>
         <DialogContent>
-          <Grid container direction="column">
+          <Grid container direction="column" spacing={16}>
             { error ? this.renderErrorMessage() : this.renderDownloadForm() }
           </Grid>
         </DialogContent>
@@ -228,6 +240,7 @@ class DownloadController extends React.Component {
 
   getCurrentImageBounds() {
     const bounds = OSDReferences.get(this.props.windowId).current.viewer.viewport.getBounds();
+    console.log(bounds);
     return this.parseOSDBounds(bounds);
   }
 
